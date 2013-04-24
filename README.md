@@ -15,14 +15,14 @@ A simple PHP wrapper for PDO that simplifies the use of prepared statements.
             LIMIT 1";
     $res = $db->get_row($sql, array("John Smith"));
 
-## Query for a set of rows
+### Query for a set of rows
     $sql = "SELECT `name`, `favourite_colour` 
             FROM `favourite_colours` 
             WHERE `favourite_colour` = ?";
     
     $res = $this->db->get_array($sql, array("blue"));
 
-## Query with multiple parameters
+### Query with multiple parameters
     $sql = "SELECT `name`, `favourite_colour` 
             FROM `favourite_colours` 
             WHERE `favourite_colour` = ? 
